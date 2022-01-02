@@ -1,7 +1,13 @@
 # Hadoop_Config
 Configuration files for Hadoop Single Node Cluster Setup in Linux
 
-Download : <b>wget https://downloads.apache.org/hadoop/common/hadoop-3.2.1/hadoop-3.2.2.tar.gz</b>
+ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
+
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+
+chmod 0600 ~/.ssh/authorized_keys
+
+Download : <b>wget https://downloads.apache.org/hadoop/common/hadoop-3.2.2/hadoop-3.2.2.tar.gz</b>
 
 A Hadoop environment is configured by editing a set of configuration files:
 * bashrc
