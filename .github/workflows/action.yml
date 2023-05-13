@@ -13,9 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     environment: test
     steps:
-      - name: Run a 
-        run: echo ${{ secrets.OPENAI_API_KEY }}
-        
       - uses: antoprince001/code-zen-track-action@v0.1.3
         id: prompt
         with:
