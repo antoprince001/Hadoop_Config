@@ -25,7 +25,7 @@ jobs:
           output-length: 25
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          GITHUB_API_TOKEN: ${{ secrets.GITHUB_API_TOKEN }}
+          API_GITHUB_TOKEN: ${{ secrets.API_GITHUB_TOKEN }}
       
       - name: Run a one-line script
         run: echo ${{ steps.prompt.outputs.test }}
