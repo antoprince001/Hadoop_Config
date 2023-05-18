@@ -14,21 +14,20 @@ jobs:
     runs-on: ubuntu-latest
     environment: test
     steps:
-      - uses: antoprince001/code-zen-track-action@v1
+      - uses: antoprince001/code-zen-track-action@v1.0.2
         id: prompt
         with:
           persona: "Superman DC Comics"
           github-input: "contributions"
           action: "judge"
           tone: "funny"
-          contribution-period: 5
+          contribution-period: 50
           output-length: 25
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           API_GITHUB_TOKEN: ${{ secrets.API_GITHUB_TOKEN }}
       
       - name: Run a one-line script
-        run: echo ${{ steps.prompt.outputs.test }}
-
+        run: echo ${{ steps.prompt.outputs.response }} 
       - name: Run a one-line 
-        run: echo ${{ steps.prompt.outputs.response }}
+        run: echo ${{ steps.prompt.outputs.prompt }}
