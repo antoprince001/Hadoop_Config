@@ -26,8 +26,43 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           API_GITHUB_TOKEN: ${{ secrets.API_GITHUB_TOKEN }}
+          
+      - uses: antoprince001/code-zen-track-action@v1.0.2
+        id: prompt1
+        with:
+          persona: "Batman DC Comics"
+          github-input: "issueComments"
+          action: "quote"
+          tone: "serious"
+          contribution-period: 50
+          output-length: 25
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          API_GITHUB_TOKEN: ${{ secrets.API_GITHUB_TOKEN }}
       
-      - name: Run a one-line script
-        run: echo ${{ steps.prompt.outputs.response }} 
-      - name: Run a one-line 
-        run: echo ${{ steps.prompt.outputs.prompt }}
+      - uses: antoprince001/code-zen-track-action@v1.0.2
+        id: prompt2
+        with:
+          persona: "Deadpool Marvel Comics"
+          github-input: "prs"
+          action: "joke"
+          tone: "funny"
+          contribution-period: 50
+          output-length: 25
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          API_GITHUB_TOKEN: ${{ secrets.API_GITHUB_TOKEN }}
+      
+      - uses: antoprince001/code-zen-track-action@v1.0.2
+        id: prompt3
+        with:
+          persona: "Elon Musk Twitter"
+          github-input: "repos"
+          action: "judge"
+          tone: "right"
+          contribution-period: 50
+          output-length: 25
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          API_GITHUB_TOKEN: ${{ secrets.API_GITHUB_TOKEN }}
+    
