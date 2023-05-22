@@ -17,10 +17,10 @@ jobs:
       - uses: antoprince001/code-zen-track-action@v1.0.2
         id: prompt
         with:
-          persona: "Superman DC Comics"
+          persona: "Darth Vader Starwars"
           github-input: "contributions"
           action: "judge"
-          tone: "funny"
+          tone: "helpful"
           contribution-period: 15
           output-length: 50
         env:
