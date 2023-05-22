@@ -17,7 +17,7 @@ jobs:
       - uses: antoprince001/code-zen-track-action@v1.0.2
         id: prompt
         with:
-          persona: "Darth Vader Starwars"
+          persona: "Batman DC Comics"
           github-input: "contributions"
           action: "judge"
           tone: "helpful"
@@ -40,7 +40,7 @@ jobs:
             #### GPT Response: ✨🙌
             ${{ steps.prompt.outputs.response }}
             
-            We encourage you to reflect on this prompt and consider incorporating it into your coding routine. Embracing code zen can lead to improved focus, creativity, and efficiency in your programming tasks.
+            We encourage you to reflect on this response and consider incorporating it into your coding routine. Embracing code zen can lead to improved focus, creativity, and efficiency in your programming tasks.
             
             Remember to take regular breaks, practice self-care, and maintain a growth mindset throughout your coding journey. 
             
