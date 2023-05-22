@@ -31,22 +31,20 @@ jobs:
         uses: actions-ecosystem/action-create-issue@v1
         with:
           github_token: ${{ secrets.API_GITHUB_TOKEN }}
-          title: Code Zen Tracking Prompt
+          title: ✨Code Zen Tracking Prompt✨
           body: |
-            ## This week's TODO
-
-            - [ ] Have a meeting with UX team
-            - [ ] Check the dashboard
-            We understand the significance of maintaining a state of code zen and fostering a healthy coding mindset. To support you in this endeavor, we've generated a personalized prompt using GPT (a language model) to help you track and enhance your code zen.
+            We understand the significance of maintaining a state of code zen and fostering a healthy coding mindset.  😊✨ 
+            To support you in this endeavor, we've generated a personalized prompt using GPT (a language model) to help you track and enhance your code zen. 
+            🚀🎨
             
-            #### GPT Response:
+            #### GPT Response: ✨🙌
             ${{ steps.prompt.outputs.response }}
             
             We encourage you to reflect on this prompt and consider incorporating it into your coding routine. Embracing code zen can lead to improved focus, creativity, and efficiency in your programming tasks.
             
             Remember to take regular breaks, practice self-care, and maintain a growth mindset throughout your coding journey. 
             
-            Wishing you a harmonious coding experience !
+            Wishing you a harmonious coding experience 🌟💻✨
 
           labels: |
             code-zen
